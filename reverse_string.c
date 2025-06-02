@@ -1,22 +1,22 @@
+// reverse_string.c
 #include <stdio.h>
-
-// Ce programme permet d’inverser une chaîne de caractères entrée par l’utilisateur.
 
 int main() {
     char str[100];
-    int i, len = 0;
+    int i = 0, length = 0;
 
-    printf("Entrez une chaîne : ");
-    scanf("%s", str); // Compatible Sorkho : lit un mot sans espace
+    fgets(str, sizeof(str), stdin); // lire toute la ligne (espaces compris)
 
-    while (str[len] != '\0') {
-        len++;
+    // Calculer la longueur manuellement
+    while (str[length] != '\0' && str[length] != '\n') {
+        length++;
     }
 
-    printf("Chaîne inversée : ");
-    for (i = len - 1; i >= 0; i--) {
+    printf("Chaine inversée : ");
+    for (i = length - 1; i >= 0; i--) {
         printf("%c", str[i]);
     }
+
     printf("\n");
 
     return 0;

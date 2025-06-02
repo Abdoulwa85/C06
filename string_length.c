@@ -1,19 +1,15 @@
 #include <stdio.h>
 
-// Ce programme permet de mesurer la longueur d’une chaîne sans utiliser strlen.
-
 int main() {
     char str[100];
-    int i = 0;
+    int count = 0;
 
-    printf("Entrez une chaîne : ");
-    scanf("%s", str); // Lit un mot sans espace
+    scanf(" %[^\n]", str);
 
-    while (str[i] != '\0') {
-        i++;
+    while (str[count] != '\0') {
+        count++;
     }
 
-    printf("Longueur de la chaîne : %d\n", i);
-
+    printf("Longueur de la chaîne : %d\n", count);
     return 0;
 }
