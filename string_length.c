@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// ce programme permet de calculer la longueur du chaine sans utiliser strlen
 int main() {
     char str[100];
     int count = 0;
