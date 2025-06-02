@@ -7,15 +7,15 @@ int main() {
     int i, len = 0;
 
     printf("Entrez une chaîne : ");
-    scanf("%[^\n]", str); // Lire toute la ligne, y compris les espaces
+    scanf("%s", str); // Compatible Sorkho : lit un mot sans espace
 
     while (str[len] != '\0') {
-        len++; // Calcul de la longueur de la chaîne
+        len++;
     }
 
     printf("Chaîne inversée : ");
     for (i = len - 1; i >= 0; i--) {
-        printf("%c", str[i]); // Affichage des caractères en sens inverse
+        printf("%c", str[i]);
     }
     printf("\n");
 
